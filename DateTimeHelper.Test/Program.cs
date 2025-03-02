@@ -33,6 +33,9 @@ class Program
             var endDate = DateTime.Parse(dates[1]);
             var dateDiff = startDate.DateDiff(endDate);
             Console.WriteLine($"Difference between {startDate} and {endDate} is {dateDiff.years} years, {dateDiff.months} months, {dateDiff.days} days, {dateDiff.hours} hours, {dateDiff.minutes} minutes, and {dateDiff.seconds} seconds");
+            Console.WriteLine($"{startDate} Hijri Date is: {startDate.ToHijriDate()}");
+            Console.WriteLine($"{endDate} Hijri Date is: {endDate.ToHijriDate()}");
+            Console.WriteLine("================================");
         }
     }
 }

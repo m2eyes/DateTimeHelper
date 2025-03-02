@@ -12,14 +12,14 @@ namespace DateTimeHelper
         /// <remarks>
         /// This method converts Gregorian date to Hijri date
         /// </remarks>
-        public static DateTime ToHijriDate(this DateTime gregorianDate)
+        public static string ToHijriDate(this DateTime gregorianDate)
         {
             Calendar umAlQura = new UmAlQuraCalendar();
             var hijriYear = umAlQura.GetYear(gregorianDate);
             var hijriMonth = umAlQura.GetMonth(gregorianDate);
             var hijriDay = umAlQura.GetDayOfMonth(gregorianDate);
 
-            return new DateTime(hijriYear, hijriMonth, hijriDay, umAlQura);
+            return $"{hijriDay}/{hijriMonth}/{hijriYear} {gregorianDate:hh:mm:ss tt}";
         }
 
         /// <summary>
