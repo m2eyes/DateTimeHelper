@@ -12,14 +12,14 @@ Converts a Gregorian date to a Hijri date.
 
 **Signature:**
 ```csharp
-public static DateTime ToHijriDate(this DateTime gregorianDate)
+public static string ToHijriDate(this DateTime gregorianDate)
 ```
 
 **Parameters:**
 - `gregorianDate` (DateTime): The Gregorian date to convert.
 
 **Returns:**
-- `DateTime`: The corresponding Hijri date.
+- `string`: The corresponding Hijri date.
 
 **Remarks:**
 This method uses the `UmAlQuraCalendar` to perform the conversion.
@@ -50,7 +50,7 @@ using DateTimeHelper;
 
 // Convert Gregorian date to Hijri date
 DateTime gregorianDate = new DateTime(2023, 10, 1);
-DateTime hijriDate = gregorianDate.ToHijriDate();
+string hijriDate = gregorianDate.ToHijriDate();
 Console.WriteLine($"Hijri Date: {hijriDate}");
 
 // Calculate the difference between two dates
